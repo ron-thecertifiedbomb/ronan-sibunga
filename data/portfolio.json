@@ -2,104 +2,127 @@
   "metadata": {
     "siteName": "Ronan Ramos Sibunga Portfolio",
     "siteUrl": "https://ronansibunga.com",
-    "title": "Ronan Ramos Sibunga • Senior Fullstack Engineer & Mobile Architect",
-    "description": "Senior Fullstack Engineer specializing in React Native ecosystems, AI orchestration pipelines, backend infrastructure, workflow automation, and production-grade system engineering.",
+    "title": "Ronan Ramos Sibunga • Senior Software Engineer & Distributed Systems Architect",
+    "description": "Senior Software Engineer specializing in distributed systems, AI orchestration pipelines, React Native ecosystems, NestJS backend engineering, Dockerized infrastructure, workflow automation, and end-to-end product architecture.",
     "keywords": [
       "Ronan Ramos Sibunga",
-      "Fullstack Engineer",
-      "React Native Developer",
+      "Senior Software Engineer",
+      "Distributed Systems Engineer",
+      "Fullstack Architect",
+      "React Native Engineer",
+      "NestJS Developer",
+      "Docker Engineer",
       "AI Orchestration",
-      "NextJS Portfolio",
-      "Node.js Engineer",
-      "Python Developer",
-      "Mobile Architect",
-      "Backend Engineer",
       "Workflow Automation",
+      "Node.js Engineer",
+      "TypeScript Engineer",
+      "Python Developer",
+      "Backend Architect",
+      "Mobile Systems Architect",
+      "Microservices",
       "PostgreSQL",
       "MongoDB",
-      "NestJS",
-      "TypeScript"
+      "CI/CD",
+      "Infrastructure Automation",
+      "Cloud Native"
     ],
     "author": "Ronan Ramos Sibunga",
     "locale": "en-PH",
-    "themeColor": "#000000",
+    "themeColor": "#020617",
     "ogImage": "/og-image.png",
     "twitterHandle": "@ronanramos",
-    "status": "All systems operational."
+    "status": "Building scalable systems for modern businesses."
   },
 
   "personal": {
     "name": "Ronan Ramos Sibunga",
-    "title": "Senior Fullstack Engineer & Mobile Architect",
-    "subtitle": "React Native • AI Orchestration • Workflow Automation • Node.js • Python",
-    "location": "SJDM, Bulacan, Philippines",
-    "summary": "Senior Fullstack Engineer and Mobile Developer specializing in robust React Native ecosystems, production-grade AI Orchestration pipelines, and enterprise Setup Automation."
+    "title": "Senior Software Engineer & Distributed Systems Architect",
+    "subtitle": "AI Orchestration • Distributed Systems • React Native • NestJS • Docker • Automation",
+    "location": "San Jose Del Monte, Bulacan, Philippines",
+    "summary": "Senior Software Engineer focused on end-to-end product engineering, distributed backend systems, AI orchestration pipelines, cloud-native infrastructure, and scalable mobile ecosystems. Experienced in architecting production-grade applications using React Native, NestJS, Node.js, Python, Docker, PostgreSQL, and modern automation workflows."
   },
 
-  "contact": {
-    "email": "ronan.sibunga@gmail.com",
-    "phone": "+63 9913817033",
-    "address": "Ciudad Real Subdivision, City of San Jose Del Monte, Bulacan",
-    "github": "https://github.com/ron-thecertifiedbomb",
-    "linkedin": "https://www.linkedin.com/in/ronan-sibunga-2747a5252/",
-    "website": "https://lizardinteractive.online"
-  },
+"contact": {
+  "email": "ronan.sibunga@gmail.com",
+  "phone": "+63 9913817033",
+  "address": "Ciudad Real Subdivision, City of San Jose Del Monte, Bulacan",
+  "github": "https://github.com/ron-thecertifiedbomb",
+  "linkedin": "https://www.linkedin.com/in/ronan-sibunga-2747a5252/",
+  "website": "https://lizardinteractive.online",
+  "companyWebsite": "https://rondev.com.ph"
+},
 
   "tags": [
-    "React Native",
+    "Distributed Systems",
     "AI Orchestration",
-    "Setup Automation",
-    "Python",
+    "NestJS",
+    "Docker",
+    "React Native",
     "Node.js",
-    "React",
-    "NextJS",
+    "TypeScript",
+    "Python",
+    "Workflow Automation",
+    "Cloud Infrastructure",
+    "PostgreSQL",
     "MongoDB",
-    "PostgreSQL"
+    "Microservices",
+    "CI/CD"
   ],
 
   "skills": [
-    "React Native",
+    "Distributed Systems Architecture",
+    "React Native Engineering",
+    "NestJS Backend Development",
     "AI Orchestration (LLMs / Agents)",
-    "Setup Automation & CI/CD",
-    "Python",
+    "Docker & Containerization",
+    "Infrastructure Automation",
+    "Workflow Automation",
     "Node.js",
     "TypeScript",
+    "Python",
+    "PostgreSQL",
     "MongoDB",
     "REST APIs",
-    "PostgreSQL"
+    "Microservices",
+    "CI/CD Pipelines",
+    "Cloud-Native Development"
   ],
 
   "competencies": [
     {
-      "title": "React Native Mobile Engineering",
-      "description": "Cross-platform mobile development using React Native and Expo frameworks."
+      "title": "End-to-End Product Engineering",
+      "description": "Designing and delivering complete production systems across frontend, backend, infrastructure, automation, and deployment pipelines."
     },
     {
-      "title": "AI Orchestration & Agentic Tools",
-      "description": "Production LLM integrations, multi-agent systems, and vector embedding pipelines."
+      "title": "Distributed Systems & Backend Architecture",
+      "description": "Building scalable backend services, event-driven workflows, microservices, and resilient APIs using NestJS, Node.js, PostgreSQL, and Docker."
     },
     {
-      "title": "Infrastructure & Setup Automation",
-      "description": "Cloud environment provisioning, deployment pipelines, and CI/CD automation."
+      "title": "AI Orchestration & Intelligent Automation",
+      "description": "Developing LLM-integrated systems, agent workflows, orchestration pipelines, embeddings, and automation tooling for modern operational environments."
     },
     {
-      "title": "Backend Services (Node.js & Python)",
-      "description": "Low-latency backend APIs with PostgreSQL and MongoDB ecosystems."
+      "title": "React Native Mobile Ecosystems",
+      "description": "Engineering cross-platform mobile systems with scalable architecture, offline-first capabilities, and production deployment strategies."
+    },
+    {
+      "title": "Cloud Infrastructure & DevOps",
+      "description": "Containerized deployments, CI/CD pipelines, infrastructure automation, and environment orchestration using Docker and modern DevOps workflows."
     }
   ],
 
   "experience": [
     {
-      "role": "Fullstack Developer",
+      "role": "Senior Fullstack Engineer",
       "company": "Lizard Interactive Online",
       "period": "Mar 2025 - Present",
-      "desc": "Architecting enterprise web and mobile systems using React Native, Node.js, and Python."
+      "desc": "Architecting distributed web and mobile platforms with React Native, NestJS, Node.js, Docker, PostgreSQL, and AI-powered automation pipelines."
     },
     {
       "role": "Full Stack Developer (Sub Lead)",
       "company": "Ascendion",
       "period": "Dec 2024 - Feb 2025",
-      "desc": "Spearheaded front-end engineering teams and scalable React architectures."
+      "desc": "Led frontend and backend engineering initiatives, scalable React ecosystems, workflow optimization, and enterprise-grade system delivery."
     }
   ],
 
