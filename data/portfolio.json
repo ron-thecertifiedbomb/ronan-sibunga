@@ -1,79 +1,86 @@
 {
   "metadata": {
-    "siteName": "Ronan Ramos Sibunga Portfolio",
-    "siteUrl": "https://ronansibunga.com",
-    "title": "Ronan Ramos Sibunga • Senior Software Engineer & Distributed Systems Architect",
-    "description": "Senior Software Engineer specializing in distributed systems, AI orchestration pipelines, React Native ecosystems, NestJS backend engineering, Dockerized infrastructure, workflow automation, and end-to-end product architecture.",
+    "siteName": "Rondev Software Development Services",
+    "siteUrl": "https://rondev.com.ph",
+    "title": "Ronan Ramos Sibunga • Systems-Oriented Software Engineer",
+    "description": "Systems-oriented Software Engineer specializing in distributed systems, AI orchestration, infrastructure-aware development, backend architecture, automation workflows, React Native ecosystems, and end-to-end product engineering.",
     "keywords": [
       "Ronan Ramos Sibunga",
-      "Senior Software Engineer",
+      "Systems-Oriented Software Engineer",
+      "Platform Engineer",
       "Distributed Systems Engineer",
-      "Fullstack Architect",
+      "AI Orchestration",
+      "End-to-End Product Engineer",
       "React Native Engineer",
       "NestJS Developer",
       "Docker Engineer",
-      "AI Orchestration",
+      "Infrastructure Automation",
       "Workflow Automation",
       "Node.js Engineer",
       "TypeScript Engineer",
       "Python Developer",
-      "Backend Architect",
-      "Mobile Systems Architect",
-      "Microservices",
+      "Backend Systems",
+      "Cloud Infrastructure",
       "PostgreSQL",
       "MongoDB",
+      "Redis",
       "CI/CD",
-      "Infrastructure Automation",
-      "Cloud Native"
+      "Docker",
+      "Cloud Native",
+      "Automation Systems"
     ],
     "author": "Ronan Ramos Sibunga",
     "locale": "en-PH",
     "themeColor": "#020617",
     "ogImage": "/og-image.png",
     "twitterHandle": "@ronanramos",
-    "status": "Building scalable systems for modern businesses."
+    "status": "Building scalable systems, automation workflows, and AI-powered platforms."
   },
 
   "personal": {
     "name": "Ronan Ramos Sibunga",
-    "title": "Senior Software Engineer & Distributed Systems Architect",
-    "subtitle": "AI Orchestration • Distributed Systems • React Native • NestJS • Docker • Automation",
+    "title": "Systems-Oriented Software Engineer",
+    "subtitle": "Distributed Systems • AI Orchestration • Platform Engineering • Automation",
     "location": "San Jose Del Monte, Bulacan, Philippines",
-    "summary": "Senior Software Engineer focused on end-to-end product engineering, distributed backend systems, AI orchestration pipelines, cloud-native infrastructure, and scalable mobile ecosystems. Experienced in architecting production-grade applications using React Native, NestJS, Node.js, Python, Docker, PostgreSQL, and modern automation workflows."
+    "summary": "Systems-oriented Software Engineer focused on end-to-end product engineering, distributed application systems, AI orchestration workflows, infrastructure-aware development, and scalable backend architectures. Experienced in building production-ready platforms using React Native, Next.js, NestJS, Node.js, Python, Docker, PostgreSQL, MongoDB, and modern deployment workflows."
   },
 
-"contact": {
-  "email": "ronan.sibunga@gmail.com",
-  "phone": "+63 9913817033",
-  "address": "Ciudad Real Subdivision, City of San Jose Del Monte, Bulacan",
-  "github": "https://github.com/ron-thecertifiedbomb",
-  "linkedin": "https://www.linkedin.com/in/ronan-sibunga-2747a5252/",
-  "website": "https://lizardinteractive.online",
-  "companyWebsite": "https://rondev.com.ph"
-},
+  "contact": {
+    "email": "ronan.sibunga@gmail.com",
+    "phone": "+63 9913817033",
+    "address": "Ciudad Real Subdivision, City of San Jose Del Monte, Bulacan",
+    "github": "https://github.com/ron-thecertifiedbomb",
+    "linkedin": "https://www.linkedin.com/in/ronan-sibunga-2747a5252/",
+    "website": "https://lizardinteractive.online",
+    "companyWebsite": "https://rondev.com.ph"
+  },
 
   "tags": [
     "Distributed Systems",
     "AI Orchestration",
+    "Platform Engineering",
     "NestJS",
     "Docker",
+    "Infrastructure Automation",
+    "Workflow Automation",
     "React Native",
     "Node.js",
     "TypeScript",
     "Python",
-    "Workflow Automation",
-    "Cloud Infrastructure",
     "PostgreSQL",
     "MongoDB",
-    "Microservices",
-    "CI/CD"
+    "Redis",
+    "CI/CD",
+    "Cloud Infrastructure"
   ],
 
   "skills": [
     "Distributed Systems Architecture",
-    "React Native Engineering",
-    "NestJS Backend Development",
-    "AI Orchestration (LLMs / Agents)",
+    "Platform Engineering",
+    "AI Orchestration Workflows",
+    "Backend Systems Development",
+    "NestJS Backend Engineering",
+    "React Native Ecosystems",
     "Docker & Containerization",
     "Infrastructure Automation",
     "Workflow Automation",
@@ -82,47 +89,67 @@
     "Python",
     "PostgreSQL",
     "MongoDB",
+    "Redis",
     "REST APIs",
     "Microservices",
     "CI/CD Pipelines",
-    "Cloud-Native Development"
+    "Cloud-Native Development",
+    "Linux VPS Deployment"
   ],
 
   "competencies": [
     {
       "title": "End-to-End Product Engineering",
-      "description": "Designing and delivering complete production systems across frontend, backend, infrastructure, automation, and deployment pipelines."
+      "description": "Designing and delivering production-grade systems across frontend, backend, infrastructure, deployment workflows, automation services, and operational platforms."
     },
     {
       "title": "Distributed Systems & Backend Architecture",
-      "description": "Building scalable backend services, event-driven workflows, microservices, and resilient APIs using NestJS, Node.js, PostgreSQL, and Docker."
+      "description": "Building scalable backend services, modular APIs, orchestration workflows, event-driven systems, and resilient application ecosystems using NestJS, Node.js, PostgreSQL, Redis, and Docker."
     },
     {
       "title": "AI Orchestration & Intelligent Automation",
-      "description": "Developing LLM-integrated systems, agent workflows, orchestration pipelines, embeddings, and automation tooling for modern operational environments."
+      "description": "Developing AI-assisted operational systems, orchestration pipelines, MCP-integrated workflows, local LLM experimentation, and intelligent automation services."
     },
     {
-      "title": "React Native Mobile Ecosystems",
-      "description": "Engineering cross-platform mobile systems with scalable architecture, offline-first capabilities, and production deployment strategies."
+      "title": "Infrastructure & Platform Engineering",
+      "description": "Managing VPS-hosted systems, Dockerized environments, reverse proxies, Cloudflare networking, CI/CD workflows, SSL configuration, and deployment automation."
     },
     {
-      "title": "Cloud Infrastructure & DevOps",
-      "description": "Containerized deployments, CI/CD pipelines, infrastructure automation, and environment orchestration using Docker and modern DevOps workflows."
+      "title": "React Native Application Ecosystems",
+      "description": "Engineering scalable cross-platform mobile systems with reusable architecture, performance optimization, and production-ready deployment strategies."
     }
   ],
 
   "experience": [
     {
-      "role": "Senior Fullstack Engineer",
-      "company": "Lizard Interactive Online",
+      "role": "Founder & CEO",
+      "company": "Rondev Software Development Services / Lizard Interactive Online",
       "period": "Mar 2025 - Present",
-      "desc": "Architecting distributed web and mobile platforms with React Native, NestJS, Node.js, Docker, PostgreSQL, and AI-powered automation pipelines."
+      "desc": "Leading the architecture and development of scalable end-to-end software systems, backend services, AI orchestration workflows, infrastructure automation, and VPS-hosted deployment environments using React Native, Next.js, NestJS, Node.js, Python, Docker, PostgreSQL, MongoDB, Cloudflare, and modern cloud-native engineering practices."
     },
     {
-      "role": "Full Stack Developer (Sub Lead)",
-      "company": "Ascendion",
-      "period": "Dec 2024 - Feb 2025",
-      "desc": "Led frontend and backend engineering initiatives, scalable React ecosystems, workflow optimization, and enterprise-grade system delivery."
+      "role": "Frontend Developer (Sub Lead)",
+      "company": "Ascendion / Collabera Team",
+      "period": "Aug 2024 - Feb 2025",
+      "desc": "Developed and optimized enterprise-grade React Native systems, performance-critical frontend workflows, scalable application architecture, rendering optimization, and production-level diagnostics for Cebu Pacific Air desktop and mobile platforms."
+    },
+    {
+      "role": "React Native Engineer",
+      "company": "Viral Picks",
+      "period": "Feb 2024 - Aug 2024",
+      "desc": "Built scalable cross-platform mobile systems using React Native, integrated GraphQL APIs, optimized application performance, and improved maintainability across mobile engineering workflows."
+    },
+    {
+      "role": "Software Engineer (Frontend Systems)",
+      "company": "Veritas Pay",
+      "period": "Feb 2023 - Feb 2024",
+      "desc": "Developed scalable eCommerce application systems using ReactJS, Next.js, and React Native while improving SSR performance, React hydration workflows, rendering optimization, and production application responsiveness."
+    },
+    {
+      "role": "Freelance Software Engineer",
+      "company": "Independent Projects",
+      "period": "Feb 2020 - Jan 2022",
+      "desc": "Designed and developed business-oriented web and mobile systems with focus on scalable architecture, responsive application workflows, maintainability, and production-ready frontend engineering."
     }
   ],
 
