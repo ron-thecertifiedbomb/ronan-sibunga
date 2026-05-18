@@ -27,7 +27,7 @@ export default function NavBar({
         <nav className="sticky top-0 z-50 border-b border-zinc-900 bg-black/80 backdrop-blur-md">
             <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
                 <div className="flex h-full items-center">
-                    <div className="relative flex h-10 w-10 items-center">
+                    <div className="relative flex h-12 w-12 items-center">
                         <Image
                             src="/portfolio.png"
                             alt="RS logo"
