@@ -1,257 +1,359 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
+
 import {
   Briefcase,
   Mail,
   Phone,
   MapPin,
   ExternalLink,
-
   GraduationCap,
   Layers,
   Terminal,
   Cpu,
   FileText,
   Bot,
-  Workflow
+  Workflow,
 } from "lucide-react";
-import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
-import Image from "next/image";
+
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+} from "@tabler/icons-react";
+
 import ContactForm from "@/app/components/ContactForm";
+import NavBar from "@/app/components/NavBar";
+
 import profile from "@/data/portfolio.json";
 
-
-
 export default function PortfolioPage() {
+  const servicesRef = useRef<HTMLElement | null>(null);
+  const experienceRef = useRef<HTMLElement | null>(null);
+  const contactRef = useRef<HTMLElement | null>(null);
+
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <div className="min-h-screen bg-black text-zinc-300 relative z-10">
+    <div className="relative z-10 min-h-screen bg-black text-zinc-300">
+      {/* Header */}
+      <NavBar
+        servicesRef={servicesRef}
+        experienceRef={experienceRef}
+        contactRef={contactRef}
+      />
 
-      {/* Header / Navigation Bar */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-zinc-900 bg-black/80">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center h-full">
-            <div className="relative h-10 w-10 flex items-center">
-              <Image
-                src="/portfolio.png"
-                alt="RS logo"
-                width={112}
-                height={48}
-                priority
-                className="object-contain h-auto max-h-full w-auto"
-              />
-            </div>
-          </div>
-          <div className="flex items-center gap-6 text-sm font-medium text-zinc-500">
-            <a href="#services" className="hover:text-zinc-200 transition-colors">Solutions</a>
-            <a href="#experience" className="hover:text-zinc-200 transition-colors">Timeline</a>
-            <a href="#contact" className="px-3 py-1.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-200 hover:bg-zinc-800 transition-all">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
-
-      {/* Main Container */}
-      <main className="max-w-6xl mx-auto px-6 py-4">
-
-        {/* Hero Section */}
-        <section className="py-6 md:py-10 flex flex-col items-start gap-6 border-b border-zinc-900">
-          {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 text-xs font-mono tracking-wide">
-                        ⚙️ SYSTEMS ONLINE // AI & AUTOMATION AGENTS POWERED
-                    </div> */}
-
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white max-w-5xl leading-tight">
-            Engineering intelligent <span className="text-zinc-400">Mobile Apps, AI Orchestration, & System Automation.</span>
+      {/* Main */}
+      <main className="mx-auto max-w-6xl px-6 py-4">
+        {/* Hero */}
+        <section className="flex flex-col items-start gap-6 border-b border-zinc-900 py-6 md:py-10">
+          <h1 className="max-w-5xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl">
+            Engineering intelligent{" "}
+            <span className="text-zinc-400">
+              Mobile Apps, AI Orchestration, & System Automation.
+            </span>
           </h1>
 
-          <p className="text-zinc-400 text-lg md:text-xl font-normal max-w-3xl leading-relaxed">
-            Hi, I&apos;m <span className="text-zinc-100 font-semibold">{profile.personal.name}</span>. {profile.personal.summary}
+          <p className="max-w-3xl text-lg font-normal leading-relaxed text-zinc-400 md:text-xl">
+            Hi, I&apos;m{" "}
+            <span className="font-semibold text-zinc-100">
+              {profile.personal.name}
+            </span>
+            . {profile.personal.summary}
           </p>
 
-          {/* Headline Keywords */}
-          {/* <div className="flex flex-wrap gap-2 pt-2 max-w-4xl">
-                        {profile.tags.map((tag) => (
-                            <span key={tag} className="px-2.5 py-1 rounded bg-zinc-900/40 border border-zinc-800/60 text-xs font-mono text-zinc-500">
-                                #{tag}
-                            </span>
-                        ))}
-                    </div> */}
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-4 w-full sm:w-auto">
-            <a href="#contact" className="w-full sm:w-auto text-center px-6 py-3 rounded-lg bg-zinc-100 text-black font-semibold hover:bg-zinc-200 shadow-md transition-all">
+          {/* CTA */}
+          <div className="flex w-full flex-wrap items-center gap-4 pt-4 sm:w-auto">
+            <button
+              onClick={scrollToContact}
+              className="w-full rounded-lg bg-zinc-100 px-6 py-3 text-center font-semibold text-black shadow-md transition-all hover:bg-zinc-200 sm:w-auto"
+            >
               Initiate Project Request
-            </a>
+            </button>
 
             <a
               href="/Ronan-Sibunga-Resume.pdf"
               download="Ronan-Sibunga-Resume.pdf"
-              className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-zinc-900 border border-zinc-800 font-medium text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900 px-6 py-3 text-center font-medium text-zinc-300 transition-colors hover:bg-zinc-800 hover:text-white sm:w-auto"
             >
-              <FileText size={18} className="text-zinc-400" /> Download CV / Resume
+              <FileText size={18} className="text-zinc-400" />
+              Download CV / Resume
             </a>
 
-            <a href={profile.contact.github} target="_blank" rel="noreferrer" className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-black border border-zinc-900 font-medium text-zinc-500 hover:text-zinc-300 transition-colors">
-              <IconBrandGithub size={18} /> View Source
+            <a
+              href={profile.contact.github}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-zinc-900 bg-black px-6 py-3 text-center font-medium text-zinc-500 transition-colors hover:text-zinc-300 sm:w-auto"
+            >
+              <IconBrandGithub size={18} />
+              View Source
             </a>
           </div>
         </section>
 
-        {/* Services Block / Solutions Matrix */}
-        <section id="services" className="py-16 border-b border-zinc-900">
-          <div className="flex flex-col gap-2 mb-10">
-            <h2 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
-              <Terminal className="text-zinc-400" size={22} /> Core Competencies
+        {/* Services */}
+        <section
+          ref={servicesRef}
+          className="scroll-mt-24 border-b border-zinc-900 py-16"
+        >
+          <div className="mb-10 flex flex-col gap-2">
+            <h2 className="flex items-center gap-2 text-2xl font-bold tracking-tight text-white">
+              <Terminal className="text-zinc-400" size={22} />
+              Core Competencies
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* 1. Mobile Architectures */}
-            <div className="p-6 rounded-xl bg-zinc-950 border border-zinc-900 hover:border-zinc-800 transition-all">
-              <div className="h-10 w-10 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 flex items-center justify-center mb-4">
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-xl border border-zinc-900 bg-zinc-950 p-6 transition-all hover:border-zinc-800">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">
                 <Layers size={20} />
               </div>
-              <h3 className="text-lg font-bold text-zinc-200 mb-2">React Native Mobile Engineering</h3>
-              <p className="text-sm text-zinc-500 leading-relaxed">
-                Cross-platform mobile development natively built via React Native and Expo frameworks. Seamless device hardware provisioning, robust state management, and optimized viewport rendering layout patterns.
+
+              <h3 className="mb-2 text-lg font-bold text-zinc-200">
+                React Native Mobile Engineering
+              </h3>
+
+              <p className="text-sm leading-relaxed text-zinc-500">
+                Cross-platform mobile development natively built via React
+                Native and Expo frameworks. Seamless device hardware
+                provisioning, robust state management, and optimized viewport
+                rendering layout patterns.
               </p>
             </div>
 
-            {/* 2. AI Orchestration */}
-            <div className="p-6 rounded-xl bg-zinc-950 border border-zinc-900 hover:border-zinc-800 transition-all">
-              <div className="h-10 w-10 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 flex items-center justify-center mb-4">
+            <div className="rounded-xl border border-zinc-900 bg-zinc-950 p-6 transition-all hover:border-zinc-800">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">
                 <Bot size={20} />
               </div>
-              <h3 className="text-lg font-bold text-zinc-200 mb-2">AI Orchestration & Agentic Tools</h3>
-              <p className="text-sm text-zinc-500 leading-relaxed">
-                Deploying production LLM connections, multi-agent frameworks, and vector embedding pipelines using Python and LangChain solutions. Injecting runtime cognitive functionality into standard applications safely.
+
+              <h3 className="mb-2 text-lg font-bold text-zinc-200">
+                AI Orchestration & Agentic Tools
+              </h3>
+
+              <p className="text-sm leading-relaxed text-zinc-500">
+                Deploying production LLM connections, multi-agent frameworks,
+                and vector embedding pipelines using Python and LangChain
+                solutions.
               </p>
             </div>
 
-            {/* 3. Setup Automation */}
-            <div className="p-6 rounded-xl bg-zinc-950 border border-zinc-900 hover:border-zinc-800 transition-all">
-              <div className="h-10 w-10 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 flex items-center justify-center mb-4">
+            <div className="rounded-xl border border-zinc-900 bg-zinc-950 p-6 transition-all hover:border-zinc-800">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">
                 <Workflow size={20} />
               </div>
-              <h3 className="text-lg font-bold text-zinc-200 mb-2">Infrastructure & Setup Automation</h3>
-              <p className="text-sm text-zinc-500 leading-relaxed">
-                Scripting end-to-end cloud environment setups, configuration deployments, and CI/CD pipelines. Minimizing repetitive task overhead through targeted Python automations and infrastructure tooling.
+
+              <h3 className="mb-2 text-lg font-bold text-zinc-200">
+                Infrastructure & Setup Automation
+              </h3>
+
+              <p className="text-sm leading-relaxed text-zinc-500">
+                Scripting end-to-end cloud environment setups, configuration
+                deployments, and CI/CD pipelines.
               </p>
             </div>
 
-            {/* 4. Fullstack Engines */}
-            <div className="p-6 rounded-xl bg-zinc-950 border border-zinc-900 hover:border-zinc-800 transition-all group">
-              <div className="h-10 w-10 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 flex items-center justify-center mb-4">
+            <div className="group rounded-xl border border-zinc-900 bg-zinc-950 p-6 transition-all hover:border-zinc-800">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">
                 <Cpu size={20} />
               </div>
-              <h3 className="text-lg font-bold text-zinc-200 mb-2">Backend Services (Node.js & Python)</h3>
-              <p className="text-sm text-zinc-500 leading-relaxed mb-3">
-                Building fast server microservices in Node.js and Python. Managing complex schema routing pipelines across MongoDB and PostgreSQL database backends.
+
+              <h3 className="mb-2 text-lg font-bold text-zinc-200">
+                Backend Services (Node.js & Python)
+              </h3>
+
+              <p className="mb-3 text-sm leading-relaxed text-zinc-500">
+                Building fast server microservices in Node.js and Python while
+                managing complex schema routing pipelines across PostgreSQL and
+                MongoDB.
               </p>
-              <a href={profile.contact.website} target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-zinc-400 hover:text-white inline-flex items-center gap-1">
-                Lizard Interactive Online <ExternalLink size={10} />
+
+              <a
+                href={profile.contact.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-xs font-mono text-zinc-400 hover:text-white"
+              >
+                Lizard Interactive Online
+                <ExternalLink size={10} />
               </a>
             </div>
           </div>
         </section>
 
-        {/* Tech Stack Checklist */}
-        <section id="stack" className="py-16 border-b border-zinc-900">
-          <h2 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2 mb-8">
-            <Cpu className="text-zinc-400" size={22} /> Production Ecosystem
+        {/* Stack */}
+        <section className="border-b border-zinc-900 py-16">
+          <h2 className="mb-8 flex items-center gap-2 text-2xl font-bold tracking-tight text-white">
+            <Cpu className="text-zinc-400" size={22} />
+            Production Ecosystem
           </h2>
+
           <div className="flex flex-wrap gap-3">
             {profile.skills.map((skill) => (
-              <div key={skill} className="px-4 py-2 rounded-lg bg-zinc-950 border border-zinc-900 flex items-center gap-2">
+              <div
+                key={skill}
+                className="flex items-center gap-2 rounded-lg border border-zinc-900 bg-zinc-950 px-4 py-2"
+              >
                 <div className="h-1.5 w-1.5 rounded-full bg-zinc-500" />
-                <span className="text-sm font-medium text-zinc-400">{skill}</span>
+
+                <span className="text-sm font-medium text-zinc-400">
+                  {skill}
+                </span>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Professional History */}
-        <section id="experience" className="py-16 border-b border-zinc-900">
-          <h2 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2 mb-12">
-            <Briefcase className="text-zinc-400" size={22} /> Experience Timeline
+        {/* Experience */}
+        <section
+          ref={experienceRef}
+          className="scroll-mt-24 border-b border-zinc-900 py-16"
+        >
+          <h2 className="mb-12 flex items-center gap-2 text-2xl font-bold tracking-tight text-white">
+            <Briefcase className="text-zinc-400" size={22} />
+            Experience Timeline
           </h2>
 
-          <div className="relative border-l border-zinc-900 ml-4 flex flex-col gap-10">
+          <div className="relative ml-4 flex flex-col gap-10 border-l border-zinc-900">
             {profile.experience.map((exp, index) => (
-              <div key={index} className="relative pl-8 group">
-                <div className="absolute left-0 top-1.5 -translate-x-1/2 h-3 w-3 rounded-full bg-black border-2 border-zinc-500" />
-                <span className="text-xs font-mono text-zinc-500 block mb-1">{exp.period}</span>
-                <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                <h4 className="text-sm font-semibold text-zinc-400 mb-3">{exp.company}</h4>
-                <p className="text-sm text-zinc-500 max-w-3xl leading-relaxed">{exp.desc}</p>
+              <div key={index} className="group relative pl-8">
+                <div className="absolute left-0 top-1.5 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-zinc-500 bg-black" />
+
+                <span className="mb-1 block text-xs font-mono text-zinc-500">
+                  {exp.period}
+                </span>
+
+                <h3 className="text-xl font-bold text-white">
+                  {exp.role}
+                </h3>
+
+                <h4 className="mb-3 text-sm font-semibold text-zinc-400">
+                  {exp.company}
+                </h4>
+
+                <p className="max-w-3xl text-sm leading-relaxed text-zinc-500">
+                  {exp.desc}
+                </p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Educational Credentials */}
-        <section className="py-16 border-b border-zinc-900">
-          <h2 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2 mb-6">
-            <GraduationCap className="text-zinc-400" size={22} /> Education Credentials
+        {/* Education */}
+        <section className="border-b border-zinc-900 py-16">
+          <h2 className="mb-6 flex items-center gap-2 text-2xl font-bold tracking-tight text-white">
+            <GraduationCap className="text-zinc-400" size={22} />
+            Education Credentials
           </h2>
-          <div className="p-6 rounded-xl bg-zinc-950 border border-zinc-900 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+
+          <div className="flex flex-col justify-between gap-4 rounded-xl border border-zinc-900 bg-zinc-950 p-6 sm:flex-row sm:items-center">
             <div>
-              <h3 className="text-lg font-bold text-zinc-200">Bachelor of Science in Computer Science</h3>
-              <p className="text-sm text-zinc-500">Systems Technology Institute</p>
+              <h3 className="text-lg font-bold text-zinc-200">
+                Bachelor of Science in Computer Science
+              </h3>
+
+              <p className="text-sm text-zinc-500">
+                Systems Technology Institute
+              </p>
             </div>
-            <span className="text-xs font-mono px-3 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-400 self-start sm:self-auto">
+
+            <span className="self-start rounded border border-zinc-800 bg-zinc-900 px-3 py-1 text-xs font-mono text-zinc-400 sm:self-auto">
               2013
             </span>
           </div>
         </section>
 
-        {/* Lead Capture Form Section */}
-        <section id="contact" className="py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+        {/* Contact */}
+        <section
+          ref={contactRef}
+          className="scroll-mt-24 py-16 md:py-24"
+        >
+          <div className="grid items-start gap-12 md:grid-cols-2">
             <div className="flex flex-col gap-4">
-              <h2 className="text-3xl font-extrabold tracking-tight text-white">Let&apos;s talk scope.</h2>
-              <p className="text-sm text-zinc-500 leading-relaxed max-w-md">
-                Have an automation workflow target or mobile app launch timeline? Reach out directly using my verified contact channels.
+              <h2 className="text-3xl font-extrabold tracking-tight text-white">
+                Let&apos;s talk scope.
+              </h2>
+
+              <p className="max-w-md text-sm leading-relaxed text-zinc-500">
+                Have an automation workflow target or mobile app launch
+                timeline? Reach out directly using my verified contact channels.
               </p>
 
               <div className="flex flex-col gap-3 pt-4 text-sm text-zinc-400">
-                <a href={`mailto:${profile.contact.email}`} className="flex items-center gap-3 p-3 rounded-lg bg-zinc-950 border border-zinc-900 hover:border-zinc-800 transition-colors">
+                <a
+                  href={`mailto:${profile.contact.email}`}
+                  className="flex items-center gap-3 rounded-lg border border-zinc-900 bg-zinc-950 p-3 transition-colors hover:border-zinc-800"
+                >
                   <Mail size={16} className="text-zinc-400" />
                   <span>{profile.contact.email}</span>
                 </a>
+
                 <a
-                  href={`https://wa.me/${profile.contact.phone.replace(/[^0-9]/g, "")}`}
+                  href={`https://wa.me/${profile.contact.phone.replace(
+                    /[^0-9]/g,
+                    "",
+                  )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-zinc-950 border border-zinc-900 hover:border-zinc-800 transition-colors"
+                  className="flex items-center gap-3 rounded-lg border border-zinc-900 bg-zinc-950 p-3 transition-colors hover:border-zinc-800"
                 >
                   <Phone size={16} className="text-zinc-400" />
                   <span>{profile.contact.phone}</span>
                 </a>
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-zinc-950 border border-zinc-900 text-zinc-500">
-                  <MapPin size={16} className="text-zinc-400 shrink-0" />
-                  <span className="text-xs leading-normal">{profile.contact.address}</span>
+
+                <div className="flex items-center gap-3 rounded-lg border border-zinc-900 bg-zinc-950 p-3 text-zinc-500">
+                  <MapPin
+                    size={16}
+                    className="shrink-0 text-zinc-400"
+                  />
+
+                  <span className="text-xs leading-normal">
+                    {profile.contact.address}
+                  </span>
                 </div>
               </div>
             </div>
 
-            <div className="p-8 rounded-xl bg-zinc-950 border border-zinc-900 relative">
+            <div className="relative rounded-xl border border-zinc-900 bg-zinc-950 p-8">
               <ContactForm />
             </div>
           </div>
         </section>
-
       </main>
 
-      {/* Footer Ecosystem */}
-      <footer className="border-t border-zinc-900 py-8 bg-black">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-600 font-mono">
-          <div>© {new Date().getFullYear()} Ronan Ramos Sibunga. All systems operational.</div>
+      {/* Footer */}
+      <footer className="border-t border-zinc-900 bg-black py-8">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 font-mono text-xs text-zinc-600 sm:flex-row">
+          <div>
+            © {new Date().getFullYear()} Ronan Ramos Sibunga. All systems
+            operational.
+          </div>
+
           <div className="flex items-center gap-6">
-            <a href={profile.contact.linkedin} target="_blank" rel="noreferrer" className="hover:text-zinc-400 inline-flex items-center gap-1">
-              <IconBrandLinkedin size={12} /> LinkedIn <ExternalLink size={10} />
+            <a
+              href={profile.contact.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 hover:text-zinc-400"
+            >
+              <IconBrandLinkedin size={12} />
+              LinkedIn
+              <ExternalLink size={10} />
             </a>
-            <a href={profile.contact.website} target="_blank" rel="noreferrer" className="hover:text-zinc-400 inline-flex items-center gap-1">
-              Lizard Interactive <ExternalLink size={10} />
+
+            <a
+              href={profile.contact.website}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 hover:text-zinc-400"
+            >
+              Lizard Interactive
+              <ExternalLink size={10} />
             </a>
           </div>
         </div>
