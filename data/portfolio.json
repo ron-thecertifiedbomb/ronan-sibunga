@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "siteName": "Ronan Ramos Sibunga Portfolio",
+    "siteUrl": "https://ronansibunga.com",
+    "title": "Ronan Ramos Sibunga • Senior Fullstack Engineer & Mobile Architect",
+    "description": "Senior Fullstack Engineer specializing in React Native ecosystems, AI orchestration pipelines, backend infrastructure, workflow automation, and production-grade system engineering.",
+    "keywords": [
+      "Ronan Ramos Sibunga",
+      "Fullstack Engineer",
+      "React Native Developer",
+      "AI Orchestration",
+      "NextJS Portfolio",
+      "Node.js Engineer",
+      "Python Developer",
+      "Mobile Architect",
+      "Backend Engineer",
+      "Workflow Automation",
+      "PostgreSQL",
+      "MongoDB",
+      "NestJS",
+      "TypeScript"
+    ],
+    "author": "Ronan Ramos Sibunga",
+    "locale": "en-PH",
+    "themeColor": "#000000",
+    "ogImage": "/og-image.png",
+    "twitterHandle": "@ronanramos",
+    "status": "All systems operational."
+  },
+
+  "personal": {
+    "name": "Ronan Ramos Sibunga",
+    "title": "Senior Fullstack Engineer & Mobile Architect",
+    "subtitle": "React Native • AI Orchestration • Workflow Automation • Node.js • Python",
+    "location": "SJDM, Bulacan, Philippines",
+    "summary": "Senior Fullstack Engineer and Mobile Developer specializing in robust React Native ecosystems, production-grade AI Orchestration pipelines, and enterprise Setup Automation."
+  },
+
+  "contact": {
+    "email": "ronan.sibunga@gmail.com",
+    "phone": "+63 9913817033",
+    "address": "Ciudad Real Subdivision, City of San Jose Del Monte, Bulacan",
+    "github": "https://github.com/ron-thecertifiedbomb",
+    "linkedin": "https://www.linkedin.com/in/ronan-sibunga-2747a5252/",
+    "website": "https://lizardinteractive.online"
+  },
+
+  "tags": [
+    "React Native",
+    "AI Orchestration",
+    "Setup Automation",
+    "Python",
+    "Node.js",
+    "React",
+    "NextJS",
+    "MongoDB",
+    "PostgreSQL"
+  ],
+
+  "skills": [
+    "React Native",
+    "AI Orchestration (LLMs / Agents)",
+    "Setup Automation & CI/CD",
+    "Python",
+    "Node.js",
+    "TypeScript",
+    "MongoDB",
+    "REST APIs",
+    "PostgreSQL"
+  ],
+
+  "competencies": [
+    {
+      "title": "React Native Mobile Engineering",
+      "description": "Cross-platform mobile development using React Native and Expo frameworks."
+    },
+    {
+      "title": "AI Orchestration & Agentic Tools",
+      "description": "Production LLM integrations, multi-agent systems, and vector embedding pipelines."
+    },
+    {
+      "title": "Infrastructure & Setup Automation",
+      "description": "Cloud environment provisioning, deployment pipelines, and CI/CD automation."
+    },
+    {
+      "title": "Backend Services (Node.js & Python)",
+      "description": "Low-latency backend APIs with PostgreSQL and MongoDB ecosystems."
+    }
+  ],
+
+  "experience": [
+    {
+      "role": "Fullstack Developer",
+      "company": "Lizard Interactive Online",
+      "period": "Mar 2025 - Present",
+      "desc": "Architecting enterprise web and mobile systems using React Native, Node.js, and Python."
+    },
+    {
+      "role": "Full Stack Developer (Sub Lead)",
+      "company": "Ascendion",
+      "period": "Dec 2024 - Feb 2025",
+      "desc": "Spearheaded front-end engineering teams and scalable React architectures."
+    }
+  ],
+
+  "education": {
+    "degree": "Bachelor of Science in Computer Science",
+    "school": "Systems Technology Institute",
+    "year": "2013"
+  }
+}
