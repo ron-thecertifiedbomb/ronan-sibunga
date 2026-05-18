@@ -1,51 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import { useContactForm } from "@/src/hooks/useContactForm";
 
 export default function ContactForm() {
-    const [formData, setFormData] = useState({
-        companyName: "",
-        email: "",
-        details: ""
-    });
-    const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData(prev => ({
-            ...prev,
-            [e.target.name]: e.target.value
-        }));
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setStatus("submitting");
-
-        try {
-            const response = await fetch("https://rondev-server.onrender.com/api/posts", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            });
-
-            if (!response.ok) {
-                throw new Error(`Server error: ${response.status}`);
-            }
-
-            console.log("Form payload:", formData);
-            setStatus("success");
-            setFormData({ companyName: "", email: "", details: "" });
-        } catch (error) {
-            console.error("Submission error:", error);
-            setStatus("error");
-        } finally {
-            // Revert back to the initial form UI after 5 seconds
-            setTimeout(() => {
-                setStatus("idle");
-            }, 5000);
-        }
-    };
-
+    const { formData, status, handleChange, handleSubmit } = useContactForm();
+  
     return (
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             {status === "success" && (

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import portfolio from "@/data/portfolio.json";
@@ -69,12 +69,14 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 
-  themeColor: portfolio.metadata.themeColor,
-
   robots: {
     index: true,
     follow: true,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: portfolio.metadata.themeColor,
 };
 
 export default function RootLayout({

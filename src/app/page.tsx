@@ -22,8 +22,8 @@ import {
   IconBrandLinkedin,
 } from "@tabler/icons-react";
 
-import ContactForm from "@/app/components/ContactForm";
-import NavBar from "@/app/components/NavBar";
+import ContactForm from "@/src/components/ContactForm";
+import NavBar from "@/src/components/NavBar";
 
 import profile from "@/data/portfolio.json";
 
